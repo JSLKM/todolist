@@ -14,7 +14,6 @@ class ListDataManager(private val context: Context) {
     fun readLists(): ArrayList<TaskList> {
         val sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context)
         val contents = sharedPrefs.all
-
         val taskLists = ArrayList<TaskList>()
 
         for (taskList in contents) {
@@ -23,7 +22,6 @@ class ListDataManager(private val context: Context) {
 
             taskLists.add(list)
         }
-
         return taskLists
     }
 }
